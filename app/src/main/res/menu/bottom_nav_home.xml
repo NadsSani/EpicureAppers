@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment3"
+        android:icon="@drawable/profileicon"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/addRecipes"
+        android:icon="@drawable/ic_app_settings"
+        android:title="AddRecipes" />
+    <item
+        android:id="@+id/somePage2"
+        android:icon="@drawable/ic_announcement_24px"
+        android:title="Your Recipes" />
+
+</menu>

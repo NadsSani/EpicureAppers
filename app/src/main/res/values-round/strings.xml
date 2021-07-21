@@ -1,0 +1,8 @@
+<resources>
+    <string name="hello_world">Hello Round World!</string>
+    <string-array name="Typeoffd">
+        <item>Select Category</item>
+        <item>Vegetarian</item>
+        <item>Non-Vegetarian</item>
+    </string-array>
+</resources>

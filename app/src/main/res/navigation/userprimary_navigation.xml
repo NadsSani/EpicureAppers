@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/userprimary_navigation"
+    app:startDestination="@id/homeFragment3">
+    <fragment
+        android:id="@+id/settings_dest"
+        android:name="com.nads.epicureapp.ui.homepage.profiledir.Settings"
+        android:label="Edit Proflie"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settings_dest_to_homeFragment3"
+            app:destination="@id/homeFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment3"
+        android:name="com.nads.epicureapp.ui.homepage.HomeFragment"
+        android:label="Home" >
+        <action
+            android:id="@+id/action_homeFragment3_to_searchCooks"
+            app:destination="@id/searchCooks" />
+        <action
+            android:id="@+id/action_homeFragment3_to_searchFoods"
+            app:destination="@id/searchFoods" />
+        <action
+            android:id="@+id/action_homeFragment3_to_foodDetails"
+            app:destination="@id/foodDetails" >
+            <argument
+                android:name="userid"
+                app:argType="string"
+                android:defaultValue=""
+                />
+            <argument
+                android:name="foodid"
+                app:argType="string"
+                android:defaultValue="" />
+            <argument
+                android:name="opencooksbutton"
+                app:argType="string"
+                android:defaultValue="" />
+        </action>
+        <action
+            android:id="@+id/action_homeFragment3_to_cooksPage"
+            app:destination="@id/cooksPage">
+            <argument
+                android:name="userid"
+                app:argType="string"
+                android:defaultValue=""
+                />
+            <argument
+                android:name="username"
+                app:argType="string"
+                android:defaultValue="" />
+        </action>
+        <argument
+            android:name="username"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="userid"
+            app:argType="string"
+            app:nullable="true" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/searchCooks"
+        android:name="com.nads.epicureapp.ui.homepage.searchcooksdir.SearchCooks"
+        android:label="SearchCooks" >
+        <action
+            android:id="@+id/action_searchCooks_to_cooksPage"
+            app:destination="@id/cooksPage" >
+            <argument
+                android:name="userid"
+                app:argType="string"
+                android:defaultValue=""
+                />
+            <argument
+                android:name="username"
+                app:argType="string"
+                android:defaultValue="" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/searchFoods"
+        android:name="com.nads.epicureapp.ui.homepage.searchfoodsdir.SearchFoods"
+        android:label="SearchFoods" >
+        <action
+            android:id="@+id/action_searchFoods_to_foodDetails"
+            app:destination="@id/foodDetails">
+            <argument
+                android:name="userid"
+                app:argType="string"
+                android:defaultValue="" />
+            <argument
+                android:name="foodid"
+                app:argType="string"
+                android:defaultValue="" />
+            <argument
+                android:name="opencooksbutton"
+                app:argType="string"
+                android:defaultValue="" />
+
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/cooksPage"
+        android:name="com.nads.epicureapp.ui.homepage.cookspages.CooksPage"
+        android:label="CooksPage" >
+        <action
+            android:id="@+id/action_cooksPage_to_foodDetails"
+            app:destination="@id/foodDetails">
+        <argument
+            android:name="userid"
+            app:argType="string"
+            android:defaultValue=""
+            />
+        <argument
+            android:name="foodid"
+            app:argType="string"
+            android:defaultValue="" />
+        </action>
+        <argument
+            android:name="username"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="userid"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodDetails"
+        android:name="com.nads.epicureapp.ui.homepage.FoodDetails"
+        android:label="Details Of Food"
+        tools:layout="@layout/fragment_food_details" >
+
+        <argument
+            android:name="userid"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="foodid"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="opencooksbutton"
+            app:argType="string"
+            android:defaultValue="" />
+        <action
+            android:id="@+id/action_foodDetails_to_cooksPage"
+            app:destination="@id/cooksPage">
+            <argument
+                android:name="userid"
+                app:argType="string"
+                android:defaultValue="" />
+            <argument
+                android:name="foodid"
+                app:argType="string"
+                android:defaultValue="" />
+        </action>
+        <argument
+            android:name="username"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/somePage2"
+        android:name="com.nads.epicureapp.ui.homepage.profiledir.SomePage"
+        android:label="Your Recipes"
+        tools:layout="@layout/fragment_some_page">
+
+
+        <action
+            android:id="@+id/action_somePage2_to_foodDetails"
+            app:destination="@id/foodDetails" >
+            <argument
+                android:name="userid"
+                app:argType="string"
+                android:defaultValue="" />
+            <argument
+                android:name="foodid"
+                app:argType="string"
+                android:defaultValue="" />
+            <argument
+                android:name="opencooksbutton"
+                app:argType="string"
+                android:defaultValue="" />
+
+
+
+        </action>
+        <action
+            android:id="@+id/action_somePage2_to_editRecipes"
+            app:destination="@id/editRecipes" >
+            <argument
+                android:name="userid"
+                app:argType="string"
+                android:defaultValue="" />
+            <argument
+                android:name="foodid"
+                app:argType="string"
+                android:defaultValue="" />
+            <argument
+                android:name="username"
+                app:argType="string"
+                app:nullable="true"/>
+
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/addRecipes"
+        android:name="com.nads.epicureapp.ui.homepage.profiledir.AddRecipes"
+        android:label="AddRecipes"
+        tools:layout="@layout/fragment_add_recipes" >
+        <action
+            android:id="@+id/action_addRecipes_to_homeFragment3"
+            app:destination="@id/homeFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/editRecipes"
+        android:name="com.nads.epicureapp.ui.homepage.profiledir.EditRecipes"
+        android:label="EditRecipes" >
+        <argument
+            android:name="userid"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="foodid"
+            app:argType="string"
+            android:defaultValue="" />
+        <action
+            android:id="@+id/action_editRecipes_to_homeFragment3"
+            app:destination="@id/homeFragment3" />
+        <action
+            android:id="@+id/action_editRecipes_to_somePage2"
+            app:destination="@id/somePage2" />
+
+
+    </fragment>
+</navigation>

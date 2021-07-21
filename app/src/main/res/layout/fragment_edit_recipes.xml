@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="homeviewmodel" type="com.nads.epicureapp.ui.homepage.HomeViewModel"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ProgressBar
+        android:id="@+id/editrecipeprogressbar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:id="@+id/edittexttitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:text="Edit Recipe" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="5dp">
+
+            <TextView
+                android:id="@+id/updatefoodtext"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:text="FoodTitle"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/updatefoodtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_weight="2"
+                android:hint="Title"
+                android:textSize="18sp" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="5dp">
+
+            <TextView
+                android:id="@+id/updatefoodtype"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="Veg/NonVeg"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/updatevegornonveg"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="2"/>
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="5dp">
+
+            <Button
+                android:id="@+id/updateimagebuttonrecipe"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:text="Upload Button"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/updateimageView3"
+                android:layout_width="45dp"
+                android:layout_height="70dp"
+                app:srcCompat="@drawable/profileicon"
+                android:layout_weight="2"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="5dp">
+
+            <TextView
+                android:id="@+id/updatedescriptiontext"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:text="Add Description"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/updatedescription"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:ems="10"
+                android:layout_weight="2"
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/updaterecipesbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update"
+                android:paddingTop="20dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"/>
+        </TableRow>
+    </TableLayout>
+    </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

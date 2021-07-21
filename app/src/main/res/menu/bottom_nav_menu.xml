@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment2"
+        android:icon="@drawable/profileicon"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/addRecipes2"
+        android:icon="@drawable/ic_app_settings"
+        android:title="@string/addrecipes" />
+    <item
+        android:id="@+id/somePage"
+        android:icon="@drawable/round_menu_book_black_18dp"
+        android:title="@string/somepage" />
+
+</menu>
